@@ -13,3 +13,6 @@ def notification(request):
 
 def user_info(request):
     return render(request, 'eatup/usermenu.html')
+
+def scan(request):
+    return render(request, 'eatup/scan.html')
