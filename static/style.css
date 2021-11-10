@@ -1,0 +1,47 @@
+html,
+body {
+    height: 100%;
+}
+
+footer {
+    height: 4rem;
+    box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+footer i{
+    font-size: 1.2rem;
+}
+
+header {
+    height: 4.5rem;
+}
+
+
+main {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+
+
+
+.o-summary-table td {
+    border: none;
+}
+.o-userinfo-table td {
+    border: none;
+}
+
+td p {
+    margin-bottom: 0;
+}
+
+.o-fixed-btn {
+    position:fixed;
+    right:1rem;
+    bottom:5rem;
+    border-radius: 2rem;
+}
+
+.o-profile-img{
+    border-radius: 50%;
+}

@@ -1,0 +1,27 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+notification
+{% endblock %}
+
+{% block content %}
+<div>
+    <div>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td style="width: 90px;">
+                        <img src="{% static 'media/example-apple.jpg' %}" class="img-thumbnail" alt="food1" width="90"
+                            height="90">
+                    </td>
+                    <td class="align-middle">
+                        <h6 class="mb-1">[PRODUCT NAME]</h6>
+                        <p class="mb-0">Best Effort: XXXX/XX/XX</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

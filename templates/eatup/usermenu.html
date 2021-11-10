@@ -1,0 +1,56 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+User Info
+{% endblock %}
+
+{% block content %}
+<div>
+    <div>
+        <table class="table">
+            <tbody class="o-userinfo-table">
+                <tr>
+                    <td class="w-100">
+                        <img src="{% static 'media/user-img.png' %}" class="img-thumbnail o-profile-img" alt="food1" width="90"
+                            height="90">
+                    </td>
+                    <td class="align-middle" >
+                        <a href="#" class="btn btn-sm btn-secondary"><i class="bi bi-pen"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="px-2 mb-3">
+            <h2 class="fw-bold mb-0">[USER NAME]</h2>
+            <small class="text-primary fw-bold">[MAIL ADDRESS]</small>
+        </div>
+        <div class="px-2">
+            <p class="fw-bold mb-0">Account Setting</p>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td class="w-100 ps-0">
+                            <small>User Profile</small>
+                        </td>
+                        <td class="pe-0">
+                            <i class="bi bi-chevron-right"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="w-100 ps-0">
+                            <small>Order History</small>
+                        </td>
+                        <td class="pe-0">
+                            <i class="bi bi-chevron-right"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center">
+            <a href="#" class="btn btn-secondary"><i class="bi bi-box-arrow-right pe-2"></i>Sign out</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

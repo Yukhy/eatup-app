@@ -1,0 +1,36 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'hide-scroll.css' %}">
+</head>
+<div class="d-flex align-items-center h-100 o-home">
+    <div>
+        <div class="mb-5 py-4">
+            <div id="carouselIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'media/shopping1.png' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'media/shopping2.png' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'media/shopping3.png' %}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <a href="#" class="btn btn-lg btn-primary d-block">Start Shopping Smart</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
