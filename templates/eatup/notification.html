@@ -10,16 +10,24 @@ notification
     <div>
         <table class="table">
             <tbody>
+                {% for item in history %}
+                {% for pos in item.pos.all %}
                 <tr>
                     <td style="width: 90px;">
                         <img src="{% static 'media/example-apple.jpg' %}" class="img-thumbnail" alt="food1" width="90"
                             height="90">
                     </td>
                     <td class="align-middle">
-                        <h6 class="mb-1">[PRODUCT NAME]</h6>
-                        <p class="mb-0">Best Effort: XXXX/XX/XX</p>
+                        <h6 class="mb-1 fw-bold">{{pos.name}}</h6>
+                        {% if pos.used_by %}
+                        <p class="mb-0">Used By: {{pos.used_by | date:'Y/m/d'}}</p>
+                        {% else %}
+                        <p class="mb-0">Best Effort: {{pos.best_effort | date:'Y/m/d'}}</p>
+                        {% endif %}
                     </td>
                 </tr>
+                {% endfor %}
+                {% endfor %}
             </tbody>
         </table>
     </div>

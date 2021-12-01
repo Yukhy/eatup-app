@@ -9,4 +9,7 @@ urlpatterns = [
     path('notification/', views.notification, name='notification'),
     path('user-info/', views.user_info, name='user-info'),
     path('scan/', views.scan, name='scan'),
+
+    # api
+    path('api/scan-item/', views.api_scan_item, name='api-scan-item'),
 ]
