@@ -60,7 +60,7 @@ def scan(request):
 
 def api_scan_item(request):
     pos_id = request.POST.get('pos_id')
-    get_pos = Pos.objects.get(pos_number=pos_id)
+    get_pos = Pos.objects.get(pk=pos_id)
     cart = Cart.objects.create(user=request.user)
     cart.pos.add(get_pos)
 

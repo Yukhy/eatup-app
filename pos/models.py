@@ -7,7 +7,6 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Pos(models.Model):
-    pos_number = models.IntegerField(default=000000)
     name = models.CharField(max_length=50)
     price = models.IntegerField()
     best_effort = models.DateField(null=True, blank=True) # 賞味期限
