@@ -10,21 +10,26 @@ Shopping
     <div>
         <table class="table">
             <tbody>
+                {% for item in cart %}
+                {% for pos in item.pos.all %}
                 <tr>
                     <td style="width: 90px;">
                         <img src="{% static 'media/example-apple.jpg' %}" class="img-thumbnail" alt="food1" width="90"
                             height="90">
                     </td>
                     <td class="align-middle">
-                        <h6 class="fw-bold mb-1">[PRODUCT NAME]</h6>
-                        <small class="text-muted m-0">[PRICE]</small>
+                        <h6 class="fw-bold mb-1">{{pos.name}}</h6>
+                        <small class="text-muted m-0">{{pos.price}} Yen</small>
                     </td>
                     <td class="align-middle" style="width: 32px;">
-                        <div class="d-flex align-items-center ">
+                        <div class="d-flex align-items-center">
+                            <small class="text-muted m-0 me-3">{{item.count}}</small>
                             <button type="" class="btn btn-sm btn-danger"><i class="bi bi-trash2"></i></button>
                         </div>
                     </td>
                 </tr>
+                {% endfor %}
+                {% endfor %}
             </tbody>
         </table>
     </div>
@@ -34,43 +39,46 @@ Shopping
         <table class="table o-summary-table">
             <tbody>
                 <tr>
-                    <td class="w-100">
+                    <td>
                         <small class="text-muted fw-bold">Subtotal</small>
                     </td>
                     <td class="text-end">
-                        <p class="fw-bold">[PRICE]</p>
+                        <p class="fw-bold">{{subtotal}} Yen</p>
                     </td>
                 </tr>
                 <tr>
-                    <td class="w-100">
+                    <td>
                         <small class="text-muted fw-bold">Tax</small>
                     </td>
                     <td class="text-end">
-                        <p class="fw-bold">[PRICE]</p>
+                        <p class="fw-bold">{{tax}} %</p>
                     </td>
                 </tr>
                 <tr>
-                    <td class="w-100">
+                    <td>
                         <small class="text-muted fw-bold">Order Total</small>
                     </td>
                     <td class="text-end">
-                        <p class="fw-bold">[PRICE]</p>
+                        <p class="fw-bold">{{subtotal}} Yen</p>
                     </td>
                 </tr>
-                <td class="w-100">
+                <td>
                     <small class="text-muted fw-bold">Total</small>
                 </td>
                 <td class="text-end">
-                    <h4 class="fw-bold">[PRICE]</h4>
+                    <h4 class="fw-bold">{{total}} Yen</h4>
                 </td>
             </tbody>
         </table>
         <div>
-            <a href="#" type="button" class="btn btn-lg btn-dark d-block"><i class="bi bi-check2 pe-2"></i>Proceed to
-                Checkout</a>
+            <form method="POST">
+                {% csrf_token %}
+                <button class="btn btn-lg w-100 btn-dark"><i class="bi bi-check2 pe-2"></i>Proceed to
+                    Checkout</button>
+            </form>
         </div>
     </div>
 </div>
 
-<a href="#" class="btn btn-lg btn-primary px-4 py-2 o-fixed-btn"><i class="bi bi-upc-scan pe-2"></i>Scan</a>
+<a href="{% url 'eatup:scan' %}" class="btn btn-lg btn-primary px-4 py-2 o-fixed-btn"><i class="bi bi-upc-scan pe-2"></i>Scan</a>
 {% endblock %}
