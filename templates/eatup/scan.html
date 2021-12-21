@@ -15,12 +15,12 @@ Scan QR
   <canvas id="canvas" style="width:100%;"></canvas>
 </div>
 <div id="output">
-  <div id="outputMessage">No QR code detected.</div>
+  <div id="outputMessage"></div>
   <div class="w-100" style="word-break: break-all;">
       <p id="outputData"></p>
   </div>
 </div>
-<form action="{% url 'eatup:api-scan-item' %} " method="POST">
+<form class="d-none" action="{% url 'eatup:api-scan-item' %} " method="POST">
   {% csrf_token %}
   {{form.as_p}}
   <button type="submit" id="pos-id-button">send</button>

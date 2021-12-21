@@ -12,4 +12,5 @@ urlpatterns = [
 
     # api
     path('api/scan-item/', views.api_scan_item, name='api-scan-item'),
+    #path('api/delete-item/<int:id>', views.api_delete_item, name='api-delete-item'),
 ]

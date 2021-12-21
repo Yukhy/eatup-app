@@ -1,0 +1,1 @@
+web: gunicorn eatup-app.wsgi --log-file -

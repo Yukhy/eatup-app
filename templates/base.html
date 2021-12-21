@@ -13,17 +13,16 @@
 </head>
 
 <body>
-    <header class="shadow d-flex align-items-end fixed-top">
+    <header class="shadow d-flex align-items-end w-100 fixed-top">
         <div class="mx-auto">
             <h5 class="fw-bold">EatUP</h5>
         </div>
     </header>
-    <main class="container-fluid h-100">
-        {% block content %}{% endblock %}
+    <main class="container-fluid vh-100">
+            {% block content %}{% endblock %}
     </main>
 
-    <footer class="fixed-bottom">
-        <div class="d-flex align-items-center justify-content-around h-100">
+    <footer class="d-flex align-items-center justify-content-around w-100 fixed-bottom">
             <div>
                 <a href="{% url 'eatup:index' %}" class="btn"><i class="bi bi-house"></i>
                     <br><span class="small text-muted">Home</span></a>

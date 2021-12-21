@@ -65,3 +65,4 @@ def api_scan_item(request):
     cart.pos.add(get_pos)
 
     return redirect('eatup:shopping-cart')
+
