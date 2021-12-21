@@ -12,7 +12,7 @@ TAX = 0.08
 def index(request):
     return render(request, 'eatup/index.html')
 
-@login_required
+#@login_required
 def shopping_cart(request):
     cart = Cart.objects.filter(user=request.user, is_checked_out=False)
     subtotal = 0
@@ -32,7 +32,7 @@ def shopping_cart(request):
         return redirect('eatup:index')
     return render(request, 'eatup/shoppingcart.html', params)
 
-@login_required
+#@login_required
 def notification(request):
     history = Cart.objects.filter(user=request.user, is_checked_out=True)
     params = {
@@ -40,7 +40,7 @@ def notification(request):
     }
     return render(request, 'eatup/notification.html', params)
 
-@login_required
+#@login_required
 def user_info(request):
     user = User.objects.get(username=request.user)
     params = {
@@ -48,7 +48,7 @@ def user_info(request):
     }
     return render(request, 'eatup/usermenu.html', params)
 
-@login_required
+#@login_required
 def scan(request):
     form = ScanItemForm()
     params = {
