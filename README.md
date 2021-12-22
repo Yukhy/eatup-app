@@ -19,3 +19,28 @@
   - 商品のバーコードを読み取り、カートに追加するページ
 - Notification
   - 購入した商品の賞味期限を通知するリストページ
+
+------
+# eatup
+## Application Overview
+- This is a part of the team's project in the Information Collaboration Practice 3A/3B.
+- This is a prototype of a new checkout payment application that aims to reduce food loss.
+- By reading barcodes and making payments, the application automatically notifies the user of the expiration date of purchased items.
+
+## Demo page
+- https://eatup-g1t3.herokuapp.com/
+
+## Main technology
+- Django 3.2.9
+- Python 3.8.7
+- Bootstrap 5.1
+
+## Main Features
+- Cart
+  - Confirmation page for items added to cart and payment amount
+- Scan
+  - A page that reads the barcode of a product and adds it to the cart.
+- Notification
+  - A list page that notifies you of the expiration date of the product you purchased.
+
+Translated with www.DeepL.com/Translator (free version)
